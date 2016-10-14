@@ -1,15 +1,14 @@
-import { Component, Injector } from '@angular/core';
+import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Globalization } from 'ionic-native';
-import { NavController } from 'ionic-angular';
 
 @Component({
-    styles: [require('./login.component.scss').toString()],
-    template: require('./login.component.html')
+    styles: [require('./menupage-1.component.scss').toString()],
+    template: require('./menupage-1.component.html')
 })
-export class LoginComponent {
+export class Menupage1Component {
 
-    constructor(private injector: Injector, platform: Platform) {
+    constructor(platform: Platform) {
         platform.ready().then(() => {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -19,10 +18,5 @@ export class LoginComponent {
                 err => {}
             );
         });
-    }
-
-    onSuccess() {
-        let nav: NavController = this.injector.get(NavController);
-        nav.setRoot((<any>nav)._linker.getComponentFromName('menu'));
     }
 }

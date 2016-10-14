@@ -4,20 +4,23 @@ import { enableProdMode } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MainComponent, deepLinkConfig } from './components/main/main.component';
 import { LoginComponent } from './components/login/login.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { Menupage1Component } from './components/menupage-1/menupage-1.component';
 
 if (CONFIG_MODE === 'prod') {
     enableProdMode();
 }
 
 @NgModule({
-    declarations: [MainComponent, LoginComponent],
+    declarations: [MainComponent, LoginComponent, MenuComponent, Menupage1Component],
     imports: [
         IonicModule.forRoot(MainComponent, { iconMode: 'ios', mode: 'ios' }, deepLinkConfig)
     ],
     providers: [],
     bootstrap: [IonicApp],
-    entryComponents: [MainComponent]
+    entryComponents: [LoginComponent, MenuComponent, Menupage1Component]
 })
+
 class MainModule { }
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
