@@ -7,7 +7,7 @@
 git checkout [branch-name]
 ```
 
-Three branch names:
+Three branch names: </br>
 angular2.0.2_ionic-rc0 </br>
 angular2.1.0_ionic-rc0 </br>
 angular2.1.0_ionic-rc1 </br>
