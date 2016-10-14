@@ -81,14 +81,14 @@
     "check:ionic:platform": "if [ -z ${PLATFORM} ]; then error:missing:platform; elif [ ! -d dist/${TARGET-app}/${MODE-dev}/platforms/${PLATFORM} ]; then (OPERATION=add npm run ionic:platform); fi"
   },
   "dependencies": {
-    "@angular/common": "2.1.0",
-    "@angular/compiler": "2.1.0",
-    "@angular/core": "2.1.0",
-    "@angular/forms": "2.1.0",
-    "@angular/http": "2.1.0",
-    "@angular/platform-browser": "2.1.0",
-    "@angular/platform-browser-dynamic": "2.1.0",
-    "@angular/platform-server": "2.1.0",
+    "@angular/common": "2.0.2",
+    "@angular/compiler": "2.0.2",
+    "@angular/core": "2.0.2",
+    "@angular/forms": "2.0.2",
+    "@angular/http": "2.0.2",
+    "@angular/platform-browser": "2.0.2",
+    "@angular/platform-browser-dynamic": "2.0.2",
+    "@angular/platform-server": "2.0.2",
     "@angular/router": "3.0.0",
     "core-js": "2.4.1",
     "ionic-angular": "2.0.0-rc.0-201610041708",
@@ -101,8 +101,8 @@
     "zone.js": "0.6.23"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "^2.1.0",
-    "@angular/platform-server": "^2.1.0",
+    "@angular/compiler-cli": "^2.0.2",
+    "@angular/platform-server": "^2.0.2",
     "@types/ace": "^0.0.32",
     "@types/amcharts": "^0.0.36",
     "@types/babyparse": "^0.0.30",
