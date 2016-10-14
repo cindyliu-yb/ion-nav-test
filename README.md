@@ -1,41 +1,24 @@
 # ion-nav-test
 
 
-## Usage
-
-You have access to the following npm scripts
-* **npm run clean** (clean the `dist` folder)
-* **npm run build** (build the code to the `dist` folder)
-* **npm run browsersync** (open a live browser on port 5000, recompiling the code on each change)
-* **npm run webpack:server** (same as browsersync but uses webpack-dev-server)
-* **npm run lint** (run eslint and tslint)
-* **npm run karma** (run unit test)
-* **npm run karma:watch** (run unit test in watch mode)
-* **npm run e2e** (run e2e test - make sure that browsersync or webpack:server is running in another console window) 
-* **npm run e2e:live** (run e2e test and stop to allow debug - make sure that browsersync or webpack:server is running in another console window) 
-
-## Distribution
-Note that the code is distributed to the `dist` folder
-You can pass a different TARGET or MODE using the following command:
+## Branches
 
 ```sh
-[TARGET=newtarget MODE=dev] npm run build
+git checkout [branch-name]
 ```
 
-Default TARGET is `app`, possible values will depends if you have scaffolded other targets   
-Default MODE is `dev`, can be either `prod` or `dev`    
+Three branch names:
+angular2.0.2_ionic_rc0
+angular2.1.0_ionic-rc0
+angular2.1.0_ionic-rc1
 
-The same apply to the `webpack:server` task or `browsersync` task
-`npm run webpack:server`:  compile and open a the webpack reload browser
-You can pass a different TARGET or MODE using the following command:
+## Installation
 ```sh
-[TARGET=newtarget MODE=dev] npm run webpack-server
+	npm i
 ```
 
 ## Launching
 ```sh
-npm run webpack:server
-# or
-npm run browsersync
+TARGET=mobile-ionic npm run browsersync
 ```
-Visit your browser at `http://localhost:5000`
+Visit your browser at `http://localhost:5000/www`
