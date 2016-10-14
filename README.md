@@ -7,10 +7,10 @@
 git checkout [branch-name]
 ```
 
-Three branch names:
-angular2.0.2_ionic-rc0
-angular2.1.0_ionic-rc0
-angular2.1.0_ionic-rc1
+Three branch names: </br>
+angular2.0.2_ionic-rc0 </br>
+angular2.1.0_ionic-rc0 </br>
+angular2.1.0_ionic-rc1 </br>
 
 ## Installation
 ```sh
@@ -22,3 +22,6 @@ angular2.1.0_ionic-rc1
 TARGET=mobile-ionic npm run browsersync
 ```
 Visit your browser at `http://localhost:5000/www`
+
+
+

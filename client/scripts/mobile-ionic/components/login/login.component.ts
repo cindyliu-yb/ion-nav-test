@@ -2,6 +2,7 @@ import { Component, Injector } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Globalization } from 'ionic-native';
 import { NavController } from 'ionic-angular';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
     styles: [require('./login.component.scss').toString()],
@@ -23,11 +24,8 @@ export class LoginComponent {
 
     onSuccess() {
         let nav: NavController = this.injector.get(NavController);
-        nav.setRoot((<any>nav)._linker.getComponentFromName('menu'));
-        // nav.push(MenuComponent);
+        nav.setRoot(MenuComponent);
     }
 
-    onSignup() {
-        
-    }
+    onSignup() {}
 }

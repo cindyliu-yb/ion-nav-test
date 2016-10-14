@@ -11,7 +11,7 @@ import { NavController } from 'ionic-angular';
 })
 export class MenuComponent {
 
-    rootPage: any = Menupage1Component; 
+    rootPage: any = Menupage1Component;
 
     constructor(private injector: Injector, platform: Platform) {
         platform.ready().then(() => {
