@@ -2,12 +2,15 @@ import { Component, Injector } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Globalization } from 'ionic-native';
 import { NavController } from 'ionic-angular';
+import { Menupage2Component } from '../menupage-2/menupage-2.component';
 
 @Component({
-    styles: [require('./login.component.scss').toString()],
-    template: require('./login.component.html')
+    styles: [require('./menupage-1.component.scss').toString()],
+    template: require('./menupage-1.component.html')
 })
-export class LoginComponent {
+export class Menupage1Component {
+
+    missions = [{Title: 'mission1', Year: '2005', Country: 'UK'}, {Title: 'mission2', Year: '2006', Country: 'UK'}];
 
     constructor(private injector: Injector, platform: Platform) {
         platform.ready().then(() => {
@@ -21,13 +24,8 @@ export class LoginComponent {
         });
     }
 
-    onSuccess() {
+    goToMissionDetail(mission) {
         let nav: NavController = this.injector.get(NavController);
-        nav.setRoot((<any>nav)._linker.getComponentFromName('menu'));
-        // nav.push(MenuComponent);
-    }
-
-    onSignup() {
-        
+        nav.push(Menupage2Component);
     }
 }

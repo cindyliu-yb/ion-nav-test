@@ -1,13 +1,17 @@
 import { Component, Injector } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Globalization } from 'ionic-native';
+import { Menupage1Component } from '../menupage-1/menupage-1.component';
+import { Menupage2Component } from '../menupage-2/menupage-2.component';
 import { NavController } from 'ionic-angular';
 
 @Component({
-    styles: [require('./login.component.scss').toString()],
-    template: require('./login.component.html')
+    styles: [require('./menu.component.scss').toString()],
+    template: require('./menu.component.html')
 })
-export class LoginComponent {
+export class MenuComponent {
+
+    rootPage: any = Menupage1Component; 
 
     constructor(private injector: Injector, platform: Platform) {
         platform.ready().then(() => {
@@ -21,13 +25,8 @@ export class LoginComponent {
         });
     }
 
-    onSuccess() {
+    GoToPageTwo() {
         let nav: NavController = this.injector.get(NavController);
-        nav.setRoot((<any>nav)._linker.getComponentFromName('menu'));
-        // nav.push(MenuComponent);
-    }
-
-    onSignup() {
-        
+        nav.push(Menupage2Component);
     }
 }

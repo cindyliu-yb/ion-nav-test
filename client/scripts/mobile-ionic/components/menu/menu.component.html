@@ -1,0 +1,14 @@
+<ion-menu side="left" [content]="content">
+  <ion-content>
+    <ion-list>
+     	<button>Menupage1</button>
+     	<button (click)="GoToPageTwo()">Menupage2</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content #content>
+	<div>ion-content</div>
+    <ion-nav #main [root]="rootPage"></ion-nav>
+</ion-content>
+

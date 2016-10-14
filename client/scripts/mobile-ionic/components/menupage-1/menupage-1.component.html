@@ -1,0 +1,28 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title class="yoobic">YOOBIC</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <ion-card *ngFor="let mission of missions">
+<!--     <ion-card-header>
+      <button ion-item (click)="goToMissionDetail(mission)">
+          <img [src]="mission.Poster" style="width: 40%; height: 30%">
+      </button>
+    </ion-card-header> -->
+
+    <ion-card-content>
+        <button ion-item (click)="goToMissionDetail(mission)">
+          <h2 class="missionTitle">{{ mission.Title }}</h2>
+        </button>
+        <ion-item>
+          <p item-left>{{ mission.Year}}</p>
+          <p item-right>{{ mission.Country}}</p>
+        </ion-item>
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>
