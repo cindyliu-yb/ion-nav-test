@@ -78,7 +78,8 @@
     "check:target:ionic": "if [ ! -f client/scripts/${TARGET-app}/config.xml ]; then npm run error:not:ionic; fi",
     "check:target:fuse": "if [ ! -f client/scripts/${TARGET-app}/index.ux ]; then npm run error:not:fuse; fi",
     "check:already:built": "if [ ! -d dist/${TARGET-app}/${MODE-dev}/ ]; then npm run error:unbuilt; fi",
-    "check:ionic:platform": "if [ -z ${PLATFORM} ]; then error:missing:platform; elif [ ! -d dist/${TARGET-app}/${MODE-dev}/platforms/${PLATFORM} ]; then (OPERATION=add npm run ionic:platform); fi"
+    "check:ionic:platform": "if [ -z ${PLATFORM} ]; then error:missing:platform; elif [ ! -d dist/${TARGET-app}/${MODE-dev}/platforms/${PLATFORM} ]; then (OPERATION=add npm run ionic:platform); fi",
+    "release": "mcfly-semantic-release"
   },
   "dependencies": {
     "@angular/common": "2.0.0",
